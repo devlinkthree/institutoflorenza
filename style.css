@@ -979,3 +979,149 @@ body.is-loaded .intro {
       scale(1.035);
   }
 }
+
+
+/* =========================================================
+   V5 — LOGO CORRIGIDO + CONTORNO ILUMINADO
+========================================================= */
+
+/* Logo maior, nítido e sem distorção */
+.brand__logo {
+  width: 112px;
+  height: 112px;
+  object-fit: contain;
+  object-position: center;
+  opacity: 1;
+  filter:
+    drop-shadow(0 0 12px rgba(255, 239, 228, 0.22))
+    drop-shadow(0 12px 30px rgba(25, 5, 1, 0.4))
+    brightness(1.12);
+}
+
+.brand {
+  min-height: 112px;
+}
+
+/* Brilho perimetral no contorno do celular */
+.card {
+  isolation: isolate;
+  border: 1px solid rgba(255, 232, 218, 0.28);
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.035),
+    0 0 28px rgba(255, 188, 146, 0.12),
+    0 0 86px rgba(191, 92, 56, 0.11),
+    0 36px 90px rgba(31, 8, 3, 0.42),
+    inset 0 1px rgba(255, 255, 255, 0.18);
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  z-index: 20;
+  pointer-events: none;
+  border-radius: inherit;
+  padding: 1px;
+  background:
+    linear-gradient(
+      128deg,
+      rgba(255, 255, 255, 0.48) 0%,
+      rgba(255, 225, 207, 0.16) 18%,
+      transparent 36%,
+      transparent 69%,
+      rgba(255, 188, 145, 0.24) 88%,
+      rgba(255, 241, 231, 0.38) 100%
+    );
+  -webkit-mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 0.78;
+  animation: edgeGlow 7s ease-in-out infinite;
+}
+
+.card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 19;
+  pointer-events: none;
+  border-radius: inherit;
+  box-shadow:
+    inset 12px 0 24px rgba(255, 225, 207, 0.025),
+    inset -10px 0 22px rgba(255, 174, 127, 0.035),
+    inset 0 12px 28px rgba(255, 255, 255, 0.025);
+}
+
+/* Revela mais do ambiente */
+.card__overlay {
+  background:
+    linear-gradient(180deg, rgba(42, 12, 6, 0.13), rgba(48, 17, 10, 0.47)),
+    radial-gradient(circle at 82% 26%, rgba(255, 203, 169, 0.11), transparent 30%),
+    radial-gradient(circle at 12% 72%, rgba(255, 218, 191, 0.05), transparent 22%);
+}
+
+/* Vidro mais limpo nos botões */
+.link {
+  background:
+    linear-gradient(
+      135deg,
+      rgba(255, 248, 242, 0.18),
+      rgba(255, 229, 214, 0.07)
+    );
+  border-color: rgba(255, 241, 232, 0.23);
+  box-shadow:
+    0 16px 42px rgba(31, 8, 3, 0.19),
+    inset 0 1px rgba(255, 255, 255, 0.23),
+    inset 0 -1px rgba(255, 255, 255, 0.045);
+}
+
+.link--primary {
+  background:
+    radial-gradient(circle at 84% 8%, rgba(255, 220, 198, 0.21), transparent 30%),
+    linear-gradient(
+      135deg,
+      rgba(184, 95, 64, 0.58),
+      rgba(107, 42, 28, 0.43)
+    );
+}
+
+/* Fallback visual: reserva o espaço sem mostrar ícone quebrado */
+.brand__logo:not([src]),
+.brand__logo[src=""] {
+  visibility: hidden;
+}
+
+@media (max-width: 480px) {
+  .brand__logo {
+    width: 104px;
+    height: 104px;
+  }
+
+  .brand {
+    min-height: 104px;
+  }
+}
+
+@media (max-width: 360px) {
+  .brand__logo {
+    width: 96px;
+    height: 96px;
+  }
+
+  .brand {
+    min-height: 96px;
+  }
+}
+
+@keyframes edgeGlow {
+  0%, 100% {
+    opacity: 0.58;
+    filter: brightness(0.95);
+  }
+  50% {
+    opacity: 0.92;
+    filter: brightness(1.12);
+  }
+}
