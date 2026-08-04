@@ -740,3 +740,242 @@ body.is-loaded .intro {
     opacity: 0.72;
   }
 }
+
+
+/* =========================================================
+   V4 — REFINAMENTO VISUAL
+   Mais ambiente visível · vidro real · contorno iluminado
+========================================================= */
+
+/* Remove a textura pontilhada do fundo geral e do card */
+.scene::before,
+.card__grain {
+  display: none;
+}
+
+/* Contorno claro e iluminado, sem a faixa marrom pesada */
+.card {
+  border: 1px solid rgba(255, 232, 218, 0.22);
+  background: rgba(67, 25, 16, 0.34);
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.025),
+    0 0 42px rgba(245, 166, 121, 0.09),
+    0 30px 78px rgba(35, 10, 4, 0.38),
+    inset 0 1px rgba(255, 255, 255, 0.14);
+}
+
+/* Foto com bem menos zoom para mostrar a arquitetura do ambiente */
+.card__background {
+  inset: -1.5%;
+  background-position: 50% center;
+  transform:
+    translate3d(var(--move-x), var(--move-y), 0)
+    scale(1.015);
+  animation: cinematicZoomV4 20s ease-in-out infinite alternate;
+}
+
+/* Luz mais discreta para preservar a leitura e a foto */
+.card__overlay {
+  background:
+    linear-gradient(180deg, rgba(42, 12, 6, 0.18), rgba(48, 17, 10, 0.55)),
+    radial-gradient(circle at 50% 12%, rgba(255, 193, 155, 0.09), transparent 38%),
+    radial-gradient(circle at 12% 72%, rgba(255, 218, 191, 0.06), transparent 22%);
+}
+
+/* Brilho orgânico bem suave acompanhando o mouse */
+.cursor-glow {
+  opacity: 0.38;
+  background:
+    radial-gradient(
+      220px circle at var(--x) var(--y),
+      rgba(255, 221, 199, 0.11),
+      transparent 70%
+    );
+}
+
+/* Hero mais limpo e compacto */
+.hero {
+  min-height: 400px;
+  padding-bottom: 43px;
+}
+
+.brand {
+  margin-bottom: 9px;
+}
+
+.brand__logo {
+  width: 102px;
+  height: 102px;
+  filter:
+    drop-shadow(0 10px 28px rgba(25, 5, 1, 0.42))
+    brightness(1.12);
+}
+
+.hero__eyebrow {
+  margin-bottom: 9px;
+}
+
+.hero h1 {
+  max-width: 370px;
+  font-size: clamp(40px, 10.8vw, 54px);
+  line-height: 0.94;
+}
+
+.hero h1 > span {
+  display: block;
+  white-space: normal;
+}
+
+.hero h1 em {
+  margin-top: 8px;
+}
+
+.hero__subtitle {
+  margin-top: 16px;
+}
+
+/* Menos elementos decorativos competindo com o ambiente */
+.hero__circle {
+  opacity: 0.48;
+}
+
+.spark--two {
+  display: none;
+}
+
+.spark {
+  scale: 0.82;
+}
+
+/* Glassmorphism transparente em vez de marrom sólido */
+.link {
+  border-color: rgba(255, 239, 229, 0.21);
+  background:
+    linear-gradient(
+      135deg,
+      rgba(255, 247, 240, 0.16),
+      rgba(255, 226, 209, 0.075)
+    );
+  box-shadow:
+    0 16px 42px rgba(31, 8, 3, 0.22),
+    inset 0 1px rgba(255, 255, 255, 0.2),
+    inset 0 -1px rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(20px) saturate(1.22);
+  -webkit-backdrop-filter: blur(20px) saturate(1.22);
+}
+
+.link::before {
+  background:
+    linear-gradient(
+      120deg,
+      rgba(255, 255, 255, 0.16),
+      transparent 33%,
+      transparent 72%,
+      rgba(255, 255, 255, 0.045)
+    );
+}
+
+.link--primary {
+  background:
+    radial-gradient(circle at 84% 8%, rgba(255, 218, 195, 0.18), transparent 30%),
+    linear-gradient(
+      135deg,
+      rgba(184, 95, 64, 0.62),
+      rgba(107, 42, 28, 0.48)
+    );
+  border-color: rgba(255, 229, 213, 0.3);
+}
+
+.link__icon {
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255, 255, 255, 0.19),
+      rgba(255, 255, 255, 0.075)
+    );
+}
+
+/* Mantém o brilho, porém mais refinado */
+.link::after {
+  opacity: 0.65;
+}
+
+/* Ajustes específicos para celular e navegador interno do Instagram */
+@media (max-width: 480px) {
+  .scene {
+    padding: 7px;
+  }
+
+  .card {
+    min-height: calc(100svh - 14px);
+    border-radius: 30px;
+  }
+
+  .card__background {
+    inset: -1%;
+    background-position: 49% center;
+    transform:
+      translate3d(var(--move-x), var(--move-y), 0)
+      scale(1.01);
+  }
+
+  .hero {
+    min-height: 392px;
+    padding:
+      max(24px, env(safe-area-inset-top))
+      19px
+      42px;
+  }
+
+  .brand__logo {
+    width: 96px;
+    height: 96px;
+  }
+
+  .hero h1 {
+    max-width: 350px;
+    font-size: clamp(39px, 11vw, 50px);
+    line-height: 0.95;
+  }
+
+  .links {
+    margin-top: -22px;
+    padding-inline: 13px;
+  }
+
+  .link {
+    min-height: 72px;
+  }
+}
+
+@media (max-width: 360px) {
+  .brand__logo {
+    width: 88px;
+    height: 88px;
+  }
+
+  .hero {
+    min-height: 372px;
+  }
+
+  .hero h1 {
+    font-size: 39px;
+  }
+}
+
+@keyframes cinematicZoomV4 {
+  0% {
+    transform:
+      translate3d(var(--move-x), var(--move-y), 0)
+      scale(1.01);
+  }
+  100% {
+    transform:
+      translate3d(
+        calc(var(--move-x) - 2px),
+        calc(var(--move-y) - 2px),
+        0
+      )
+      scale(1.035);
+  }
+}
