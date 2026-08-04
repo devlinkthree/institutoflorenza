@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <meta name="theme-color" content="#5B2619" />
+  <meta name="theme-color" content="#4E2117" />
 
   <title>Instituto Florenza | Links oficiais</title>
   <meta
@@ -17,9 +17,8 @@
   <meta property="og:url" content="https://devlinkthree.github.io/institutoflorenza/" />
   <meta property="og:image" content="https://devlinkthree.github.io/institutoflorenza/florenza-bg.png" />
 
-  <link rel="icon" type="image/png" href="https://devlinkthree.github.io/institutoflorenza/logo-florenza-white.png?v=6" />
-  <link rel="apple-touch-icon" href="https://devlinkthree.github.io/institutoflorenza/logo-florenza-white.png?v=6" />
-  <link rel="preload" as="image" href="https://devlinkthree.github.io/institutoflorenza/logo-florenza-white.png?v=6" />
+  <link rel="icon" type="image/png" href="instituto-florenza-logo.png" />
+  <link rel="apple-touch-icon" href="instituto-florenza-logo.png" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -28,56 +27,49 @@
     rel="stylesheet"
   />
 
-  <link rel="stylesheet" href="style.css?v=6" />
+  <link rel="stylesheet" href="style.css?v=7" />
 </head>
 
 <body>
   <div class="intro" aria-hidden="true">
-    <img src="https://devlinkthree.github.io/institutoflorenza/logo-florenza-white.png?v=6" alt="" width="96" height="96" decoding="async" fetchpriority="high" />
+    <img src="instituto-florenza-logo.png" alt="" />
   </div>
 
   <div class="scene">
-    <div class="aurora aurora--one" aria-hidden="true"></div>
-    <div class="aurora aurora--two" aria-hidden="true"></div>
+    <div class="scene__glow scene__glow--one" aria-hidden="true"></div>
+    <div class="scene__glow scene__glow--two" aria-hidden="true"></div>
 
-    <main class="card" id="card">
-      <div class="card__background" id="cardBackground" aria-hidden="true"></div>
-      <div class="card__overlay" aria-hidden="true"></div>
-      <div class="card__grain" aria-hidden="true"></div>
-      <div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
+    <main class="phone" id="phone">
+      <div class="phone__background" id="phoneBackground" aria-hidden="true"></div>
+      <div class="phone__overlay" aria-hidden="true"></div>
+      <div class="phone__light" aria-hidden="true"></div>
+      <div class="pointer-light" id="pointerLight" aria-hidden="true"></div>
+
+      <span class="particle particle--one" aria-hidden="true"></span>
+      <span class="particle particle--two" aria-hidden="true"></span>
+      <span class="particle particle--three" aria-hidden="true"></span>
+      <span class="particle particle--four" aria-hidden="true"></span>
+      <span class="particle particle--five" aria-hidden="true"></span>
 
       <header class="hero">
-        <div class="hero__circle hero__circle--one" aria-hidden="true"></div>
-        <div class="hero__circle hero__circle--two" aria-hidden="true"></div>
+        <img
+          class="hero__logo"
+          src="instituto-florenza-logo.png"
+          alt="Instituto Florenza"
+          width="260"
+          height="260"
+          fetchpriority="high"
+          decoding="async"
+        />
 
-        <span class="spark spark--one" aria-hidden="true"></span>
-        <span class="spark spark--two" aria-hidden="true"></span>
-        <span class="spark spark--three" aria-hidden="true"></span>
+        <h1>
+          Saúde feminina com
+          <em>acolhimento e tecnologia.</em>
+        </h1>
 
-        <div class="brand">
-          <img
-            class="brand__logo"
-            src="https://devlinkthree.github.io/institutoflorenza/logo-florenza-white.png?v=6"
-            alt=""
-            width="112"
-            height="112"
-            decoding="async"
-            fetchpriority="high"
-          />
-        </div>
-
-        <div class="hero__copy">
-          <p class="hero__eyebrow">Instituto Florenza</p>
-
-          <h1>
-            <span>Saúde feminina com</span>
-            <em>acolhimento e tecnologia.</em>
-          </h1>
-
-          <p class="hero__subtitle">
-            Cuidado integrado para cada fase da sua jornada.
-          </p>
-        </div>
+        <p class="hero__subtitle">
+          Cuidado integrado para cada fase da sua jornada.
+        </p>
       </header>
 
       <section class="links" aria-label="Links oficiais do Instituto Florenza">
@@ -87,7 +79,7 @@
           target="_blank"
           rel="noopener noreferrer"
         >
-          <span class="link__light" aria-hidden="true"></span>
+          <span class="link__shine" aria-hidden="true"></span>
 
           <span class="link__icon" aria-hidden="true">
             <svg viewBox="0 0 24 24">
@@ -120,12 +112,10 @@
               <path d="M3 12h18M12 3c2.4 2.5 3.6 5.5 3.6 9S14.4 18.5 12 21c-2.4-2.5-3.6-5.5-3.6-9S9.6 5.5 12 3Z"></path>
             </svg>
           </span>
-
           <span class="link__copy">
             <small>Conheça</small>
             <strong>Nosso site</strong>
           </span>
-
           <span class="link__arrow" aria-hidden="true">
             <svg viewBox="0 0 24 24">
               <path d="M5 12h14M13 6l6 6-6 6"></path>
@@ -146,12 +136,10 @@
               <circle cx="17.5" cy="6.5" r="1"></circle>
             </svg>
           </span>
-
           <span class="link__copy">
             <small>Acompanhe</small>
             <strong>Instagram</strong>
           </span>
-
           <span class="link__arrow" aria-hidden="true">
             <svg viewBox="0 0 24 24">
               <path d="M5 12h14M13 6l6 6-6 6"></path>
@@ -171,12 +159,10 @@
               <circle cx="12" cy="10" r="2.5"></circle>
             </svg>
           </span>
-
           <span class="link__copy">
             <small>Vila Olímpia</small>
             <strong>Como chegar</strong>
           </span>
-
           <span class="link__arrow" aria-hidden="true">
             <svg viewBox="0 0 24 24">
               <path d="M5 12h14M13 6l6 6-6 6"></path>
@@ -194,12 +180,10 @@
               <path d="m4 7 8 6 8-6"></path>
             </svg>
           </span>
-
           <span class="link__copy">
             <small>Contato</small>
             <strong>E-mail</strong>
           </span>
-
           <span class="link__arrow" aria-hidden="true">
             <svg viewBox="0 0 24 24">
               <path d="M5 12h14M13 6l6 6-6 6"></path>
@@ -227,33 +211,27 @@
       document.body.classList.add("is-loaded");
     });
 
-    const card = document.querySelector("#card");
-    const background = document.querySelector("#cardBackground");
-    const glow = document.querySelector("#cursorGlow");
+    const phone = document.querySelector("#phone");
+    const background = document.querySelector("#phoneBackground");
+    const pointerLight = document.querySelector("#pointerLight");
 
-    if (card && background && glow && window.matchMedia("(pointer: fine)").matches) {
-      card.addEventListener("pointermove", (event) => {
-        const rect = card.getBoundingClientRect();
+    if (phone && background && pointerLight && window.matchMedia("(pointer: fine)").matches) {
+      phone.addEventListener("pointermove", (event) => {
+        const rect = phone.getBoundingClientRect();
         const x = event.clientX - rect.left;
         const y = event.clientY - rect.top;
-        const normalizedX = x / rect.width - 0.5;
-        const normalizedY = y / rect.height - 0.5;
+        const nx = x / rect.width - 0.5;
+        const ny = y / rect.height - 0.5;
 
-        glow.style.setProperty("--x", `${x}px`);
-        glow.style.setProperty("--y", `${y}px`);
-
-        background.style.setProperty("--move-x", `${normalizedX * 10}px`);
-        background.style.setProperty("--move-y", `${normalizedY * 10}px`);
-
-        card.style.setProperty("--rotate-x", `${normalizedY * -1.2}deg`);
-        card.style.setProperty("--rotate-y", `${normalizedX * 1.2}deg`);
+        pointerLight.style.setProperty("--x", `${x}px`);
+        pointerLight.style.setProperty("--y", `${y}px`);
+        background.style.setProperty("--move-x", `${nx * 5}px`);
+        background.style.setProperty("--move-y", `${ny * 5}px`);
       });
 
-      card.addEventListener("pointerleave", () => {
+      phone.addEventListener("pointerleave", () => {
         background.style.setProperty("--move-x", "0px");
         background.style.setProperty("--move-y", "0px");
-        card.style.setProperty("--rotate-x", "0deg");
-        card.style.setProperty("--rotate-y", "0deg");
       });
     }
   </script>
