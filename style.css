@@ -1,6 +1,6 @@
 /* =========================================================
-   INSTITUTO FLORENZA — LINKTREE V12
-   Agendamentos em 2 colunas + links oficiais
+   INSTITUTO FLORENZA — LINKTREE V13
+   Agendamentos compactos · 2 colunas · WhatsApp em destaque
 ========================================================= */
 
 :root {
@@ -13,6 +13,7 @@
   --cream-soft: #f6e1d2;
   --text-soft: rgba(255, 241, 231, 0.76);
   --glass-line: rgba(255, 241, 232, 0.22);
+  --glass-fill: rgba(255, 244, 236, 0.13);
 }
 
 * {
@@ -175,8 +176,8 @@ body.is-loaded .intro {
   background:
     linear-gradient(
       180deg,
-      rgba(45, 12, 6, 0.12),
-      rgba(48, 17, 10, 0.52)
+      rgba(45, 12, 6, 0.11),
+      rgba(48, 17, 10, 0.54)
     ),
     radial-gradient(
       circle at 83% 25%,
@@ -225,23 +226,23 @@ body.is-loaded .intro {
 .hero {
   position: relative;
   z-index: 5;
-  min-height: 282px;
+  min-height: 300px;
   display: grid;
   align-content: center;
   justify-items: center;
   padding:
-    max(18px, env(safe-area-inset-top))
-    17px
-    18px;
+    max(20px, env(safe-area-inset-top))
+    18px
+    25px;
   text-align: center;
 }
 
 .hero__logo {
-  width: min(68%, 225px);
+  width: min(69%, 230px);
   height: auto;
-  max-height: 126px;
+  max-height: 130px;
   object-fit: contain;
-  margin-bottom: 7px;
+  margin-bottom: 10px;
   filter:
     drop-shadow(0 0 13px rgba(255, 241, 231, 0.2))
     drop-shadow(0 12px 30px rgba(25, 5, 1, 0.38))
@@ -250,10 +251,10 @@ body.is-loaded .intro {
 }
 
 .hero h1 {
-  max-width: 330px;
+  max-width: 352px;
   margin: 0;
   font-family: "Cormorant Garamond", serif;
-  font-size: clamp(31px, 8.5vw, 39px);
+  font-size: clamp(31px, 8.5vw, 41px);
   font-weight: 600;
   line-height: 0.98;
   letter-spacing: -0.035em;
@@ -263,18 +264,19 @@ body.is-loaded .intro {
 
 .hero h1 em {
   display: block;
-  margin-top: 5px;
+  margin-top: 6px;
   font-weight: 500;
   color: #ffd3bd;
 }
 
 .hero__subtitle {
-  max-width: 320px;
-  margin: 10px auto 0;
-  font-size: 13px;
-  line-height: 1.45;
-  font-weight: 500;
+  max-width: 334px;
+  margin: 13px auto 0;
   color: var(--text-soft);
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1.52;
+  text-wrap: balance;
 }
 
 .appointments,
@@ -282,32 +284,81 @@ body.is-loaded .intro {
   position: relative;
   z-index: 8;
   width: 100%;
-  padding-inline: 12px;
+  padding-inline: 14px;
 }
 
 .appointments {
-  margin-top: -2px;
+  margin-top: -3px;
 }
 
 .official-links {
-  margin-top: 18px;
+  margin-top: 24px;
 }
 
-.section-label {
-  margin: 0 0 9px;
-  text-align: center;
-  color: rgba(255, 225, 207, 0.78);
-  font-size: 8px;
+.section-heading {
+  display: grid;
+  grid-template-columns: minmax(28px, 1fr) auto auto minmax(28px, 1fr);
+  align-items: center;
+  gap: 9px;
+  margin: 0 2px 12px;
+  color: rgba(255, 225, 207, 0.84);
+}
+
+.section-heading h2 {
+  margin: 0;
+  white-space: nowrap;
+  font-size: 8.2px;
   font-weight: 600;
-  line-height: 1.2;
-  letter-spacing: 0.16em;
+  line-height: 1;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
+}
+
+.section-heading__line {
+  height: 1px;
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 220, 198, 0.55)
+    );
+}
+
+.section-heading__line:last-child {
+  background:
+    linear-gradient(
+      90deg,
+      rgba(255, 220, 198, 0.55),
+      transparent
+    );
+}
+
+.section-heading__icon {
+  width: 22px;
+  height: 22px;
+  display: grid;
+  place-items: center;
+  color: #ffd6bf;
+}
+
+.section-heading__icon svg {
+  width: 20px;
+  height: 20px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.55;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.section-heading--secondary {
+  margin-bottom: 12px;
 }
 
 .specialty-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 8px;
+  gap: 9px;
 }
 
 .specialty-card {
@@ -315,24 +366,27 @@ body.is-loaded .intro {
   min-width: 0;
   min-height: 82px;
   display: grid;
-  place-items: center;
   align-content: center;
-  gap: 8px;
+  gap: 10px;
   overflow: hidden;
-  padding: 10px 7px;
-  border: 1px solid var(--glass-line);
-  border-radius: 19px;
+  padding: 15px 14px 14px;
+  border: 1px solid rgba(255, 241, 232, 0.23);
+  border-radius: 20px;
   color: var(--cream);
-  text-align: center;
   text-decoration: none;
   background:
+    radial-gradient(
+      circle at 90% 8%,
+      rgba(255, 217, 192, 0.12),
+      transparent 38%
+    ),
     linear-gradient(
       135deg,
-      rgba(255, 248, 242, 0.18),
-      rgba(255, 229, 214, 0.065)
+      rgba(255, 248, 242, 0.17),
+      rgba(255, 229, 214, 0.06)
     );
   box-shadow:
-    0 12px 28px rgba(31, 8, 3, 0.17),
+    0 13px 30px rgba(31, 8, 3, 0.17),
     inset 0 1px rgba(255, 255, 255, 0.22),
     inset 0 -1px rgba(255, 255, 255, 0.04);
   backdrop-filter: blur(19px) saturate(1.2);
@@ -357,7 +411,7 @@ body.is-loaded .intro {
   background:
     linear-gradient(
       120deg,
-      rgba(255, 255, 255, 0.14),
+      rgba(255, 255, 255, 0.13),
       transparent 34%,
       transparent 73%,
       rgba(255, 255, 255, 0.035)
@@ -368,20 +422,20 @@ body.is-loaded .intro {
 .utility-card::after {
   content: "";
   position: absolute;
-  top: -110%;
-  left: -85%;
-  width: 38px;
-  height: 320%;
+  top: -115%;
+  left: -90%;
+  width: 36px;
+  height: 330%;
   rotate: 18deg;
   background:
     linear-gradient(
       90deg,
       transparent,
-      rgba(255, 255, 255, 0.2),
+      rgba(255, 255, 255, 0.18),
       transparent
     );
   transform: translateX(-220px);
-  animation: glassShine 7s ease-in-out infinite;
+  animation: glassShine 7.5s ease-in-out infinite;
 }
 
 .specialty-card:nth-child(1) {
@@ -421,81 +475,90 @@ body.is-loaded .intro {
   animation: haloPulse 5s ease-in-out infinite;
 }
 
-.specialty-card__icon,
-.utility-card__icon {
-  position: relative;
-  z-index: 2;
-  display: grid;
-  place-items: center;
-  border-radius: 50%;
-  color: #ffe1cf;
-  background:
-    linear-gradient(
-      145deg,
-      rgba(255, 255, 255, 0.19),
-      rgba(255, 255, 255, 0.07)
-    );
-  box-shadow:
-    inset 0 1px rgba(255, 255, 255, 0.15),
-    0 7px 18px rgba(30, 5, 1, 0.13);
-  transition: transform 0.25s ease;
-}
-
-.specialty-card__icon {
-  width: 32px;
-  height: 32px;
-}
-
-.specialty-card__icon svg {
-  width: 16px;
-  height: 16px;
-  fill: none;
-  stroke: currentColor;
-  stroke-width: 1.55;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-}
-
-.specialty-card__name {
+.specialty-card__eyebrow {
   position: relative;
   z-index: 2;
   display: block;
-  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  color: rgba(255, 223, 204, 0.72);
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(10px, 2.7vw, 12px);
+  font-weight: 500;
+  line-height: 1;
+  text-overflow: clip;
+}
+
+.specialty-card__row {
+  position: relative;
+  z-index: 2;
+  min-width: 0;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 20px;
+  align-items: center;
+  gap: 8px;
+}
+
+.specialty-card__row strong {
   min-width: 0;
   overflow: hidden;
   white-space: nowrap;
-  text-overflow: clip;
   font-family: "Cormorant Garamond", serif;
-  font-size: clamp(15px, 4.15vw, 18px);
+  font-size: clamp(17px, 4.65vw, 21px);
   font-weight: 600;
   line-height: 1;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.025em;
+  text-overflow: clip;
   text-shadow: 0 5px 16px rgba(30, 4, 0, 0.25);
 }
 
-.specialty-card__name--compact {
-  font-size: clamp(13.5px, 3.8vw, 16px);
-  letter-spacing: -0.035em;
+.specialty-card__row .specialty-card__name--compact {
+  font-size: clamp(15.5px, 4.2vw, 19px);
+  letter-spacing: -0.04em;
+}
+
+.specialty-card__arrow,
+.utility-card__arrow {
+  display: grid;
+  place-items: center;
+  color: #ffe2d0;
+  transition: transform 0.24s ease;
+}
+
+.specialty-card__arrow {
+  width: 20px;
+  height: 20px;
+}
+
+.specialty-card__arrow svg,
+.utility-card__arrow svg {
+  width: 100%;
+  height: 100%;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.65;
+  stroke-linecap: round;
+  stroke-linejoin: round;
 }
 
 .official-links__grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 8px;
+  gap: 9px;
 }
 
 .utility-card {
   position: relative;
   min-width: 0;
-  min-height: 58px;
+  min-height: 64px;
   display: grid;
-  grid-template-columns: 34px minmax(0, 1fr);
+  grid-template-columns: 38px minmax(0, 1fr) 16px;
   align-items: center;
   gap: 9px;
   overflow: hidden;
-  padding: 9px 10px;
+  padding: 10px;
   border: 1px solid rgba(255, 241, 232, 0.18);
-  border-radius: 17px;
+  border-radius: 18px;
   color: var(--cream);
   text-decoration: none;
   background:
@@ -515,13 +578,29 @@ body.is-loaded .intro {
 }
 
 .utility-card__icon {
-  width: 34px;
-  height: 34px;
+  position: relative;
+  z-index: 2;
+  width: 38px;
+  height: 38px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  color: #ffe1cf;
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255, 255, 255, 0.18),
+      rgba(255, 255, 255, 0.065)
+    );
+  box-shadow:
+    inset 0 1px rgba(255, 255, 255, 0.15),
+    0 7px 18px rgba(30, 5, 1, 0.13);
+  transition: transform 0.25s ease;
 }
 
 .utility-card__icon svg {
-  width: 16px;
-  height: 16px;
+  width: 18px;
+  height: 18px;
   fill: none;
   stroke: currentColor;
   stroke-width: 1.55;
@@ -543,7 +622,7 @@ body.is-loaded .intro {
 }
 
 .utility-card__copy small {
-  margin-bottom: 3px;
+  margin-bottom: 4px;
   color: rgba(255, 221, 201, 0.7);
   font-size: 7px;
   font-weight: 600;
@@ -559,6 +638,11 @@ body.is-loaded .intro {
   text-overflow: ellipsis;
 }
 
+.utility-card__arrow {
+  width: 16px;
+  height: 16px;
+}
+
 .specialty-card:active,
 .utility-card:active {
   transform: scale(0.985);
@@ -570,33 +654,81 @@ body.is-loaded .intro {
   outline-offset: 3px;
 }
 
-.welcome {
+.closing {
   position: relative;
   z-index: 5;
-  max-width: 340px;
+  max-width: 350px;
   margin:
-    17px
+    24px
     auto
-    max(19px, env(safe-area-inset-bottom));
-  padding-inline: 24px;
+    max(22px, env(safe-area-inset-bottom));
+  padding-inline: 22px;
   text-align: center;
+}
+
+.closing__divider {
+  display: grid;
+  grid-template-columns: 1fr 40px 1fr;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 13px;
+  color: rgba(216, 154, 119, 0.74);
+}
+
+.closing__divider span {
+  height: 1px;
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 220, 198, 0.5)
+    );
+}
+
+.closing__divider span:last-child {
+  background:
+    linear-gradient(
+      90deg,
+      rgba(255, 220, 198, 0.5),
+      transparent
+    );
+}
+
+.closing__divider svg {
+  width: 40px;
+  height: 24px;
+  margin-inline: auto;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.1;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.closing p {
+  margin: 0;
   font-family: "Cormorant Garamond", serif;
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 500;
-  line-height: 1.35;
+  line-height: 1.4;
   color: rgba(255, 234, 220, 0.74);
+  text-wrap: balance;
 }
 
 @media (hover: hover) {
   .specialty-card:hover,
   .utility-card:hover {
     transform: translateY(-2px);
-    border-color: rgba(255, 225, 206, 0.36);
+    border-color: rgba(255, 225, 206, 0.37);
   }
 
-  .specialty-card:hover .specialty-card__icon,
+  .specialty-card:hover .specialty-card__arrow,
+  .utility-card:hover .utility-card__arrow {
+    transform: translateX(3px);
+  }
+
   .utility-card:hover .utility-card__icon {
-    transform: scale(1.06) rotate(-3deg);
+    transform: scale(1.05) rotate(-3deg);
   }
 }
 
@@ -611,28 +743,50 @@ body.is-loaded .intro {
   }
 
   .hero {
-    min-height: 266px;
+    min-height: 282px;
     padding-inline: 14px;
-    padding-bottom: 16px;
+    padding-bottom: 21px;
   }
 
   .hero__logo {
-    width: min(66%, 205px);
-    max-height: 116px;
+    width: min(67%, 208px);
+    max-height: 118px;
   }
 
   .hero h1 {
+    max-width: 318px;
     font-size: 30px;
   }
 
   .hero__subtitle {
-    max-width: 285px;
-    font-size: 12px;
+    max-width: 292px;
+    font-size: 11.8px;
   }
 
   .appointments,
   .official-links {
     padding-inline: 10px;
+  }
+
+  .section-heading {
+    gap: 6px;
+    margin-inline: 0;
+    margin-bottom: 10px;
+  }
+
+  .section-heading h2 {
+    font-size: 7.1px;
+    letter-spacing: 0.11em;
+  }
+
+  .section-heading__icon {
+    width: 19px;
+    height: 19px;
+  }
+
+  .section-heading__icon svg {
+    width: 17px;
+    height: 17px;
   }
 
   .specialty-grid,
@@ -641,44 +795,75 @@ body.is-loaded .intro {
   }
 
   .specialty-card {
-    min-height: 78px;
-    gap: 7px;
-    padding-inline: 5px;
+    min-height: 76px;
+    gap: 8px;
+    padding: 13px 10px 12px;
     border-radius: 17px;
   }
 
-  .specialty-card__icon {
-    width: 30px;
-    height: 30px;
+  .specialty-card__eyebrow {
+    font-size: 9px;
   }
 
-  .specialty-card__name {
-    font-size: 14.5px;
+  .specialty-card__row {
+    grid-template-columns: minmax(0, 1fr) 17px;
+    gap: 5px;
   }
 
-  .specialty-card__name--compact {
-    font-size: 12.8px;
+  .specialty-card__row strong {
+    font-size: 16px;
+  }
+
+  .specialty-card__row .specialty-card__name--compact {
+    font-size: 14.2px;
+  }
+
+  .specialty-card__arrow {
+    width: 17px;
+    height: 17px;
+  }
+
+  .official-links {
+    margin-top: 21px;
   }
 
   .utility-card {
-    min-height: 56px;
-    grid-template-columns: 31px minmax(0, 1fr);
+    min-height: 60px;
+    grid-template-columns: 34px minmax(0, 1fr) 14px;
     gap: 7px;
     padding: 8px;
+    border-radius: 16px;
   }
 
   .utility-card__icon {
-    width: 31px;
-    height: 31px;
+    width: 34px;
+    height: 34px;
+  }
+
+  .utility-card__icon svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  .utility-card__copy small {
+    font-size: 6.2px;
   }
 
   .utility-card__copy strong {
-    font-size: 14px;
+    font-size: 13.8px;
   }
 
-  .welcome {
-    margin-top: 15px;
-    padding-inline: 17px;
+  .utility-card__arrow {
+    width: 14px;
+    height: 14px;
+  }
+
+  .closing {
+    margin-top: 21px;
+    padding-inline: 18px;
+  }
+
+  .closing p {
     font-size: 14px;
   }
 }
@@ -694,58 +879,61 @@ body.is-loaded .intro {
   }
 
   .hero {
-    min-height: 294px;
+    min-height: 310px;
     padding:
-      max(20px, env(safe-area-inset-top))
+      max(22px, env(safe-area-inset-top))
       22px
-      20px;
+      26px;
   }
 
   .hero__logo {
-    width: min(68%, 238px);
-    max-height: 135px;
-    margin-bottom: 8px;
+    width: min(69%, 242px);
+    max-height: 138px;
   }
 
   .hero h1 {
-    max-width: 340px;
-    font-size: clamp(32px, 8.3vw, 42px);
+    max-width: 360px;
+    font-size: clamp(34px, 8.2vw, 43px);
   }
 
   .hero__subtitle {
-    max-width: 340px;
-    margin-top: 12px;
+    max-width: 344px;
     font-size: 14px;
   }
 
   .appointments,
   .official-links {
-    padding-inline: 14px;
+    padding-inline: 16px;
   }
 
   .specialty-grid,
   .official-links__grid {
-    gap: 9px;
+    gap: 10px;
   }
 
   .specialty-card {
-    min-height: 86px;
+    min-height: 88px;
+    padding-inline: 16px;
   }
 
-  .specialty-card__name {
-    font-size: 18px;
+  .specialty-card__eyebrow {
+    font-size: 12px;
   }
 
-  .specialty-card__name--compact {
-    font-size: 16.5px;
+  .specialty-card__row strong {
+    font-size: 21px;
+  }
+
+  .specialty-card__row .specialty-card__name--compact {
+    font-size: 19px;
   }
 
   .utility-card {
-    min-height: 61px;
+    min-height: 67px;
   }
 
-  .welcome {
-    font-size: 16px;
+  .closing p {
+    font-size: 17px;
   }
 }
 
@@ -755,7 +943,7 @@ body.is-loaded .intro {
   }
 
   .phone {
-    min-height: min(970px, calc(100svh - 44px));
+    min-height: min(1030px, calc(100svh - 44px));
   }
 }
 
@@ -843,7 +1031,7 @@ body.is-loaded .intro {
 @keyframes cardReveal {
   from {
     opacity: 0;
-    transform: translateY(13px) scale(0.988);
+    transform: translateY(14px) scale(0.988);
   }
 
   to {
@@ -854,11 +1042,11 @@ body.is-loaded .intro {
 
 @keyframes glassShine {
   0%,
-  76% {
+  77% {
     transform: translateX(-230px);
   }
 
-  90%,
+  91%,
   100% {
     transform: translateX(720px);
   }
@@ -867,12 +1055,12 @@ body.is-loaded .intro {
 @keyframes haloPulse {
   0%,
   100% {
-    opacity: 0.28;
+    opacity: 0.26;
     transform: scale(0.9);
   }
 
   50% {
-    opacity: 0.62;
+    opacity: 0.58;
     transform: scale(1.08);
   }
 }
