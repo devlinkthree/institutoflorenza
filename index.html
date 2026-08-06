@@ -2,25 +2,22 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
-
   <meta
     name="viewport"
     content="width=device-width, initial-scale=1, viewport-fit=cover"
   />
-
   <meta name="theme-color" content="#4E2117" />
 
-  <title>Instituto Florenza | Agendamento</title>
-
+  <title>Instituto Florenza | Links oficiais</title>
   <meta
     name="description"
-    content="Agende sua consulta no Instituto Florenza. Saúde feminina com acolhimento, excelência e tecnologia."
+    content="Escolha uma especialidade e agende sua consulta no Instituto Florenza pelo WhatsApp."
   />
 
   <meta property="og:title" content="Instituto Florenza" />
   <meta
     property="og:description"
-    content="Escolha sua especialidade e fale com nossa equipe pelo WhatsApp."
+    content="Saúde feminina com acolhimento, excelência e tecnologia."
   />
   <meta property="og:type" content="website" />
   <meta
@@ -32,52 +29,27 @@
     content="https://devlinkthree.github.io/institutoflorenza/florenza-bg.png"
   />
 
-  <link
-    rel="icon"
-    type="image/png"
-    href="instituto-florenza-logo.png"
-  />
-
-  <link
-    rel="apple-touch-icon"
-    href="instituto-florenza-logo.png"
-  />
+  <link rel="icon" type="image/png" href="instituto-florenza-logo.png" />
+  <link rel="apple-touch-icon" href="instituto-florenza-logo.png" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
-
-  <link
-    rel="preconnect"
-    href="https://fonts.gstatic.com"
-    crossorigin
-  />
-
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
     href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=DM+Sans:wght@400;500;600&display=swap"
     rel="stylesheet"
   />
 
-  <!-- Alterado para v=10 para atualizar o CSS no navegador -->
-  <link rel="stylesheet" href="style.css?v=10" />
+  <link rel="stylesheet" href="style.css?v=12" />
 </head>
 
 <body>
   <div class="intro" aria-hidden="true">
-    <img
-      src="instituto-florenza-logo.png"
-      alt=""
-    />
+    <img src="instituto-florenza-logo.png" alt="" />
   </div>
 
   <div class="scene">
-    <div
-      class="scene__glow scene__glow--one"
-      aria-hidden="true"
-    ></div>
-
-    <div
-      class="scene__glow scene__glow--two"
-      aria-hidden="true"
-    ></div>
+    <div class="scene__glow scene__glow--one" aria-hidden="true"></div>
+    <div class="scene__glow scene__glow--two" aria-hidden="true"></div>
 
     <main class="phone" id="phone">
       <div
@@ -85,22 +57,9 @@
         id="phoneBackground"
         aria-hidden="true"
       ></div>
-
-      <div
-        class="phone__overlay"
-        aria-hidden="true"
-      ></div>
-
-      <div
-        class="phone__light"
-        aria-hidden="true"
-      ></div>
-
-      <div
-        class="pointer-light"
-        id="pointerLight"
-        aria-hidden="true"
-      ></div>
+      <div class="phone__overlay" aria-hidden="true"></div>
+      <div class="phone__light" aria-hidden="true"></div>
+      <div class="pointer-light" id="pointerLight" aria-hidden="true"></div>
 
       <header class="hero">
         <img
@@ -125,287 +84,199 @@
 
       <section
         class="appointments"
-        aria-label="Agendamento por especialidade"
+        aria-labelledby="appointmentsTitle"
       >
-        <p class="appointments__eyebrow">
+        <p class="section-label" id="appointmentsTitle">
           Agendamento pelo WhatsApp
         </p>
 
-        <!-- SAÚDE ÍNTIMA -->
-        <a
-          class="appointment-card"
-          href="https://wa.me/5511999490837?text=Ol%C3%A1%21%20Gostaria%20de%20agendar%20uma%20consulta%20na%20especialidade%20Sa%C3%BAde%20%C3%8Dntima%20no%20Instituto%20Florenza."
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="Agendar consulta de Saúde Íntima pelo WhatsApp"
-        >
-          <span
-            class="appointment-card__shine"
-            aria-hidden="true"
-          ></span>
-
-          <span
-            class="appointment-card__icon"
-            aria-hidden="true"
+        <div class="specialty-grid">
+          <a
+            class="specialty-card"
+            href="https://wa.me/5511999490837?text=Ol%C3%A1%21%20Gostaria%20de%20agendar%20uma%20consulta%20de%20Sa%C3%BAde%20%C3%8Dntima%20no%20Instituto%20Florenza."
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Agendar consulta de Saúde Íntima pelo WhatsApp"
           >
-            <svg viewBox="0 0 24 24">
-              <rect
-                x="4"
-                y="5"
-                width="16"
-                height="15"
-                rx="3"
-              ></rect>
+            <span class="specialty-card__glow" aria-hidden="true"></span>
+            <span class="specialty-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24">
+                <path d="M12 21s-7-4.5-7-11a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 6.5-7 11-7 11Z"></path>
+              </svg>
+            </span>
+            <span class="specialty-card__name">Saúde íntima</span>
+          </a>
 
-              <path d="M8 3v4M16 3v4M4 10h16"></path>
-
-              <path d="M12 13v4M10 15h4"></path>
-            </svg>
-          </span>
-
-          <span class="appointment-card__name">
-            Saúde íntima
-          </span>
-
-          <span
-            class="appointment-card__arrow"
-            aria-hidden="true"
+          <a
+            class="specialty-card"
+            href="https://wa.me/5511999490837?text=Ol%C3%A1%21%20Gostaria%20de%20agendar%20uma%20consulta%20de%20Sa%C3%BAde%20Hormonal%20no%20Instituto%20Florenza."
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Agendar consulta de Saúde Hormonal pelo WhatsApp"
           >
-            <svg viewBox="0 0 24 24">
-              <path d="M5 12h14M13 6l6 6-6 6"></path>
-            </svg>
-          </span>
-        </a>
+            <span class="specialty-card__glow" aria-hidden="true"></span>
+            <span class="specialty-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24">
+                <path d="M12 3v18M7 7c0 2.7 2.2 5 5 5s5 2.3 5 5"></path>
+                <path d="M17 7c0 2.7-2.2 5-5 5s-5 2.3-5 5"></path>
+              </svg>
+            </span>
+            <span class="specialty-card__name specialty-card__name--compact">
+              Saúde hormonal
+            </span>
+          </a>
 
-        <!-- SAÚDE HORMONAL -->
-        <a
-          class="appointment-card"
-          href="https://wa.me/5511999490837?text=Ol%C3%A1%21%20Gostaria%20de%20agendar%20uma%20consulta%20na%20especialidade%20Sa%C3%BAde%20Hormonal%20no%20Instituto%20Florenza."
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="Agendar consulta de Saúde Hormonal pelo WhatsApp"
-        >
-          <span
-            class="appointment-card__shine"
-            aria-hidden="true"
-          ></span>
-
-          <span
-            class="appointment-card__icon"
-            aria-hidden="true"
+          <a
+            class="specialty-card"
+            href="https://wa.me/5511999490837?text=Ol%C3%A1%21%20Gostaria%20de%20agendar%20uma%20consulta%20de%20Sa%C3%BAde%20Sexual%20no%20Instituto%20Florenza."
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Agendar consulta de Saúde Sexual pelo WhatsApp"
           >
-            <svg viewBox="0 0 24 24">
-              <rect
-                x="4"
-                y="5"
-                width="16"
-                height="15"
-                rx="3"
-              ></rect>
+            <span class="specialty-card__glow" aria-hidden="true"></span>
+            <span class="specialty-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24">
+                <circle cx="9" cy="9" r="4"></circle>
+                <circle cx="15" cy="15" r="4"></circle>
+                <path d="m12 12 2-2"></path>
+              </svg>
+            </span>
+            <span class="specialty-card__name">Saúde sexual</span>
+          </a>
 
-              <path d="M8 3v4M16 3v4M4 10h16"></path>
-
-              <path d="M12 13v4M10 15h4"></path>
-            </svg>
-          </span>
-
-          <span class="appointment-card__name">
-            Saúde hormonal
-          </span>
-
-          <span
-            class="appointment-card__arrow"
-            aria-hidden="true"
+          <a
+            class="specialty-card"
+            href="https://wa.me/5511999490837?text=Ol%C3%A1%21%20Gostaria%20de%20agendar%20uma%20consulta%20de%20Tricologia%20no%20Instituto%20Florenza."
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Agendar consulta de Tricologia pelo WhatsApp"
           >
-            <svg viewBox="0 0 24 24">
-              <path d="M5 12h14M13 6l6 6-6 6"></path>
-            </svg>
-          </span>
-        </a>
+            <span class="specialty-card__glow" aria-hidden="true"></span>
+            <span class="specialty-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24">
+                <path d="M8 20c0-5 1-9 4-16M12 20c0-5 1-9 4-16M16 20c0-4 .5-7 2-11"></path>
+                <path d="M6 10c2-1 4-1 6 0"></path>
+              </svg>
+            </span>
+            <span class="specialty-card__name">Tricologia</span>
+          </a>
 
-        <!-- SAÚDE SEXUAL -->
-        <a
-          class="appointment-card"
-          href="https://wa.me/5511999490837?text=Ol%C3%A1%21%20Gostaria%20de%20agendar%20uma%20consulta%20na%20especialidade%20Sa%C3%BAde%20Sexual%20no%20Instituto%20Florenza."
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="Agendar consulta de Saúde Sexual pelo WhatsApp"
-        >
-          <span
-            class="appointment-card__shine"
-            aria-hidden="true"
-          ></span>
-
-          <span
-            class="appointment-card__icon"
-            aria-hidden="true"
+          <a
+            class="specialty-card"
+            href="https://wa.me/5511999490837?text=Ol%C3%A1%21%20Gostaria%20de%20agendar%20uma%20consulta%20de%20Est%C3%A9tica%20no%20Instituto%20Florenza."
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Agendar consulta de Estética pelo WhatsApp"
           >
-            <svg viewBox="0 0 24 24">
-              <rect
-                x="4"
-                y="5"
-                width="16"
-                height="15"
-                rx="3"
-              ></rect>
+            <span class="specialty-card__glow" aria-hidden="true"></span>
+            <span class="specialty-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24">
+                <path d="M12 3 14 9l6 2-6 2-2 6-2-6-6-2 6-2 2-6Z"></path>
+              </svg>
+            </span>
+            <span class="specialty-card__name">Estética</span>
+          </a>
 
-              <path d="M8 3v4M16 3v4M4 10h16"></path>
-
-              <path d="M12 13v4M10 15h4"></path>
-            </svg>
-          </span>
-
-          <span class="appointment-card__name">
-            Saúde sexual
-          </span>
-
-          <span
-            class="appointment-card__arrow"
-            aria-hidden="true"
+          <a
+            class="specialty-card"
+            href="https://wa.me/5511999490837?text=Ol%C3%A1%21%20Gostaria%20de%20agendar%20uma%20consulta%20de%20Nutri%C3%A7%C3%A3o%20no%20Instituto%20Florenza."
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Agendar consulta de Nutrição pelo WhatsApp"
           >
-            <svg viewBox="0 0 24 24">
-              <path d="M5 12h14M13 6l6 6-6 6"></path>
-            </svg>
-          </span>
-        </a>
+            <span class="specialty-card__glow" aria-hidden="true"></span>
+            <span class="specialty-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24">
+                <path d="M12 21c4-3 6-7 6-12-5 0-9 2-12 6 1 3 3 5 6 6Z"></path>
+                <path d="M7 17c3-3 6-5 11-6"></path>
+              </svg>
+            </span>
+            <span class="specialty-card__name">Nutrição</span>
+          </a>
+        </div>
+      </section>
 
-        <!-- TRICOLOGIA -->
-        <a
-          class="appointment-card"
-          href="https://wa.me/5511999490837?text=Ol%C3%A1%21%20Gostaria%20de%20agendar%20uma%20consulta%20na%20especialidade%20Tricologia%20no%20Instituto%20Florenza."
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="Agendar consulta de Tricologia pelo WhatsApp"
-        >
-          <span
-            class="appointment-card__shine"
-            aria-hidden="true"
-          ></span>
+      <section class="official-links" aria-labelledby="officialLinksTitle">
+        <p class="section-label" id="officialLinksTitle">
+          Links do Instituto
+        </p>
 
-          <span
-            class="appointment-card__icon"
-            aria-hidden="true"
+        <div class="official-links__grid">
+          <a
+            class="utility-card"
+            href="https://institutoflorenza.com.br/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Acessar o site do Instituto Florenza"
           >
-            <svg viewBox="0 0 24 24">
-              <rect
-                x="4"
-                y="5"
-                width="16"
-                height="15"
-                rx="3"
-              ></rect>
+            <span class="utility-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24">
+                <circle cx="12" cy="12" r="9"></circle>
+                <path d="M3 12h18M12 3c2.4 2.5 3.6 5.5 3.6 9S14.4 18.5 12 21c-2.4-2.5-3.6-5.5-3.6-9S9.6 5.5 12 3Z"></path>
+              </svg>
+            </span>
+            <span class="utility-card__copy">
+              <small>Conheça</small>
+              <strong>Nosso site</strong>
+            </span>
+          </a>
 
-              <path d="M8 3v4M16 3v4M4 10h16"></path>
-
-              <path d="M12 13v4M10 15h4"></path>
-            </svg>
-          </span>
-
-          <span class="appointment-card__name">
-            Tricologia
-          </span>
-
-          <span
-            class="appointment-card__arrow"
-            aria-hidden="true"
+          <a
+            class="utility-card"
+            href="https://instagram.com/institutoflorenza"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Acessar o Instagram do Instituto Florenza"
           >
-            <svg viewBox="0 0 24 24">
-              <path d="M5 12h14M13 6l6 6-6 6"></path>
-            </svg>
-          </span>
-        </a>
+            <span class="utility-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24">
+                <rect x="3" y="3" width="18" height="18" rx="5"></rect>
+                <circle cx="12" cy="12" r="4"></circle>
+                <circle cx="17.5" cy="6.5" r="1"></circle>
+              </svg>
+            </span>
+            <span class="utility-card__copy">
+              <small>Acompanhe</small>
+              <strong>Instagram</strong>
+            </span>
+          </a>
 
-        <!-- ESTÉTICA -->
-        <a
-          class="appointment-card"
-          href="https://wa.me/5511999490837?text=Ol%C3%A1%21%20Gostaria%20de%20agendar%20uma%20consulta%20na%20especialidade%20Est%C3%A9tica%20no%20Instituto%20Florenza."
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="Agendar consulta de Estética pelo WhatsApp"
-        >
-          <span
-            class="appointment-card__shine"
-            aria-hidden="true"
-          ></span>
-
-          <span
-            class="appointment-card__icon"
-            aria-hidden="true"
+          <a
+            class="utility-card"
+            href="https://google.com/maps?ll=-23.581901,-46.672873&z=14&t=m&hl=pt-BR&gl=US&mapclient=embed&q=Rua+do+Rocio+288+Vila+Olimpia+Sao+Paulo"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Abrir a localização do Instituto Florenza no Google Maps"
           >
-            <svg viewBox="0 0 24 24">
-              <rect
-                x="4"
-                y="5"
-                width="16"
-                height="15"
-                rx="3"
-              ></rect>
+            <span class="utility-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24">
+                <path d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 1 1 16 0Z"></path>
+                <circle cx="12" cy="10" r="2.5"></circle>
+              </svg>
+            </span>
+            <span class="utility-card__copy">
+              <small>Vila Olímpia</small>
+              <strong>Como chegar</strong>
+            </span>
+          </a>
 
-              <path d="M8 3v4M16 3v4M4 10h16"></path>
-
-              <path d="M12 13v4M10 15h4"></path>
-            </svg>
-          </span>
-
-          <span class="appointment-card__name">
-            Estética
-          </span>
-
-          <span
-            class="appointment-card__arrow"
-            aria-hidden="true"
+          <a
+            class="utility-card"
+            href="mailto:atendimento@institutoflorenza.com.br"
+            aria-label="Enviar e-mail para o Instituto Florenza"
           >
-            <svg viewBox="0 0 24 24">
-              <path d="M5 12h14M13 6l6 6-6 6"></path>
-            </svg>
-          </span>
-        </a>
-
-        <!-- NUTROLOGIA E MEDICINA INTEGRATIVA -->
-        <a
-          class="appointment-card appointment-card--long"
-          href="https://wa.me/5511999490837?text=Ol%C3%A1%21%20Gostaria%20de%20agendar%20uma%20consulta%20na%20especialidade%20Nutrologia%20e%20Medicina%20Integrativa%20no%20Instituto%20Florenza."
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="Agendar consulta de Nutrologia e Medicina Integrativa pelo WhatsApp"
-        >
-          <span
-            class="appointment-card__shine"
-            aria-hidden="true"
-          ></span>
-
-          <span
-            class="appointment-card__icon"
-            aria-hidden="true"
-          >
-            <svg viewBox="0 0 24 24">
-              <rect
-                x="4"
-                y="5"
-                width="16"
-                height="15"
-                rx="3"
-              ></rect>
-
-              <path d="M8 3v4M16 3v4M4 10h16"></path>
-
-              <path d="M12 13v4M10 15h4"></path>
-            </svg>
-          </span>
-
-          <span class="appointment-card__name">
-            Nutrologia e Medicina Integrativa
-          </span>
-
-          <span
-            class="appointment-card__arrow"
-            aria-hidden="true"
-          >
-            <svg viewBox="0 0 24 24">
-              <path d="M5 12h14M13 6l6 6-6 6"></path>
-            </svg>
-          </span>
-        </a>
+            <span class="utility-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24">
+                <rect x="3" y="5" width="18" height="14" rx="2"></rect>
+                <path d="m4 7 8 6 8-6"></path>
+              </svg>
+            </span>
+            <span class="utility-card__copy">
+              <small>Contato</small>
+              <strong>E-mail</strong>
+            </span>
+          </a>
+        </div>
       </section>
 
       <p class="welcome">
@@ -422,38 +293,20 @@
     const phone = document.querySelector("#phone");
     const background = document.querySelector("#phoneBackground");
     const pointerLight = document.querySelector("#pointerLight");
+    const hasFinePointer = window.matchMedia("(pointer: fine)").matches;
 
-    const hasFinePointer = window.matchMedia(
-      "(pointer: fine)"
-    ).matches;
-
-    if (
-      phone &&
-      background &&
-      pointerLight &&
-      hasFinePointer
-    ) {
+    if (phone && background && pointerLight && hasFinePointer) {
       phone.addEventListener("pointermove", (event) => {
         const rect = phone.getBoundingClientRect();
-
         const x = event.clientX - rect.left;
         const y = event.clientY - rect.top;
-
         const normalizedX = x / rect.width - 0.5;
         const normalizedY = y / rect.height - 0.5;
 
         pointerLight.style.setProperty("--x", `${x}px`);
         pointerLight.style.setProperty("--y", `${y}px`);
-
-        background.style.setProperty(
-          "--move-x",
-          `${normalizedX * 5}px`
-        );
-
-        background.style.setProperty(
-          "--move-y",
-          `${normalizedY * 5}px`
-        );
+        background.style.setProperty("--move-x", `${normalizedX * 5}px`);
+        background.style.setProperty("--move-y", `${normalizedY * 5}px`);
       });
 
       phone.addEventListener("pointerleave", () => {
